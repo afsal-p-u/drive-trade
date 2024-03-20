@@ -1,4 +1,6 @@
 import React from "react";
+import { GoPlusCircle } from "react-icons/go";
+import { IoSendSharp } from "react-icons/io5";
 
 const Chat = () => {
   return (
@@ -23,13 +25,13 @@ const Chat = () => {
           </div>
         </div>
 
-        <div className="basis-2/3 border-[1px]">
+        <div className="basis-2/3 border-[1px] rounded-md">
           <div className="border-b-[1px] py-3 px-4">
             <h3 className="text-sm font-medium">Arawind T</h3>
           </div>
 
           <div className="px-4 flex flex-col min-h-[60vh]">
-            <div className="flex">
+            <div className="flex flex-start">
               <div className="flex gap-3 items-start mt-3 basis-1/2 ">
                 <div className="min-w-[30px] w-[30px] h-[30px] bg-gray-200 rounded-full"></div>
                 <div className="bg-[#eee] px-3 py-2 rounded-md">
@@ -53,8 +55,12 @@ const Chat = () => {
           </div>
 
           {/* message control */}
-          <div className="px-4">
-            adshf
+          <div className="px-4 flex items-center pb-2 gap-3">
+            <GoPlusCircle className="cursor-pointer text-xl" />
+            <div className="border-[1px] w-full py-1 rounded-md px-2">
+              <input type="search" className="border-none text-sm outline-none w-full" name="" id="" />
+            </div>
+            <IoSendSharp className="cursor-pointer text-xl" />
           </div>
         </div>
       </div>
