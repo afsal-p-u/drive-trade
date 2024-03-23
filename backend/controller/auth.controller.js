@@ -5,7 +5,7 @@ const authModel = require('../models/auth.model')
 const loginController = async (req, res) => {
     const { email, password } = req.body
 
-    const user = await authModel.find({ email })
+    const user = await authModel.findOne({ email })
     if (!user) {
         return res.status(500).json("User not found")
     }
@@ -30,16 +30,17 @@ const loginController = async (req, res) => {
 }   
 
 const registerController = async (req, res) => {
-    const { username, email } = req.body
+    const { email, username } = req.body
 
-    const checkEmail = await authModel.find({ email })
-    if (checkEmail) {
-        return res.status(200).json("Email already exist!")
+    const user = await authModel.findOne({ email })
+    if (user) {
+        return res.status(401).json('Email already in use')
     }
 
-    const checkUsername = await authModel.find({ username })
+
+    const checkUsername = await authModel.findOne({ username })
     if (checkUsername) {
-        return res.status(200).json("Usename already exist!")
+        return res.status(401).json("Username already exist!")
     }
 
     await new authModel({
