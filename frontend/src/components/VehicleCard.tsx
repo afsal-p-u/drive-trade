@@ -1,4 +1,3 @@
-import React from "react";
 import img1 from "../assets/benz/01.jpg";
 import { IoMdSpeedometer } from "react-icons/io";
 import { RiSteering2Line } from "react-icons/ri";

@@ -1,4 +1,3 @@
-import React from "react";
 import img1 from "../assets/benz/01.jpg";
 import { IoChatbubblesOutline } from "react-icons/io5"
 import { Link } from "react-router-dom";

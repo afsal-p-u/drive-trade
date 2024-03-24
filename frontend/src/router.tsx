@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Auth, Chat, Home, Login, Register, VehicleInfo, Vehicles } from "./pages";
+import { Auth, Chat, ForgotPassword, Home, Login, Register, VehicleInfo, Vehicles } from "./pages";
 import Layout from "./layout";
 
 const router = createBrowserRouter([
@@ -36,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register />
+      },
+      {
+        path: '/forgot-password',
+        element: <ForgotPassword />
       },
     ]
   },

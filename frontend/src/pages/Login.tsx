@@ -1,4 +1,4 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Input } from "../components";
 import { loginAuthItems } from "../utils/auth";
 import { ChangeEvent, useState } from "react";
@@ -39,9 +39,11 @@ const Login = () => {
             Don't have an account?
           </p>
         </Link>
-        <p className="mt-2 text-end text-xs text-gray-400 cursor-pointer">
-          Forgot password?
-        </p>
+        <Link to={'/forgot-password'}>
+          <p className="mt-2 text-end text-xs text-gray-400 cursor-pointer">
+            Forgot password?
+          </p>
+        </Link>
         <div className="mt-7 flex justify-center">
           <button
             className="px-7 py-1 rounded-sm bg-red-500 text-[#eee] hover:text-red-500 hover:bg-transparent

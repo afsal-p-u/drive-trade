@@ -1,11 +1,13 @@
-import React from "react";
-import { MdFavoriteBorder } from "react-icons/md";
+import { MdLogin } from "react-icons/md";
 import { CiBookmark } from "react-icons/ci";
 import { BsChat } from "react-icons/bs";
 import { IoSearch } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../contexts/AuthContext";
 
 const Navbar = () => {
+  const { token } = useAuthContext();
+
   return (
     <div className="px-[100px] py-3 border-b-[1px] shadow-sm">
       <div className="flex items-center justify-between">
@@ -21,13 +23,23 @@ const Navbar = () => {
             <input type="search" placeholder="Search here..." className="border-none outline-none" />
             <IoSearch className="text-xl cursor-pointer" />
           </div>
-          <div className="flex items-center gap-5">
-            <CiBookmark className="text-2xl cursor-pointer" />
-            <Link to='/chat'>
-              <BsChat className="text-xl cursor-pointer" />
-            </Link>
-            <div className="w-[30px] h-[30px] bg-gray-500 rounded-full cursor-pointer"></div>
-          </div>
+          {token ? (
+            <>
+              <div className="flex items-center gap-5">
+                <CiBookmark className="text-2xl cursor-pointer" />
+                <Link to='/chat'>
+                  <BsChat className="text-xl cursor-pointer" />
+                </Link>
+                <div className="w-[30px] h-[30px] bg-gray-500 rounded-full cursor-pointer"></div>
+              </div>
+            </>
+          ) : (
+            <div className="flex items-center">
+              <Link to="/login">
+                <MdLogin className="text-2xl cursor-pointer" /> 
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>

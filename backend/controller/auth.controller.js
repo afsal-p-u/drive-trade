@@ -19,14 +19,14 @@ const loginController = async (req, res) => {
         id: user._id,
         username: user.username,
         email: user.email,
-        isAdmin: user.isAdmin
+        isUser: user.isUser
     }, 
     process.env.JWT_SECRETKEY,
     {
         expiresIn: "4d"
     })
 
-    return res.status(200).json(accessToken)
+    return res.status(200).json({ token: accessToken, user: user._id })
 }   
 
 const registerController = async (req, res) => {
