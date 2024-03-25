@@ -1,0 +1,12 @@
+export const LoginAuthData = [
+    {
+        type: "email",
+        name: "email",
+        placeholder: "Email address",
+    },
+    {
+        type: "password",
+        name: "password",
+        placeholder: "Password",
+    }
+]
