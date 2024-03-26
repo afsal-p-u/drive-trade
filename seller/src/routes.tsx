@@ -1,8 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Login, Register } from "./pages";
+import { Home, Login, Register } from "./pages";
 import ZeroLayout from "./layout/zeroLayout";
+import ContentLayout from "./layout/contentLayout";
 
 const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <ContentLayout />,
+        children: [
+            {
+                path: "/",
+                element: <Home />
+            }
+        ]
+    },
     {
         path: '/',
         element: <ZeroLayout />,
@@ -17,7 +28,6 @@ const router = createBrowserRouter([
             },
         ]
     },
-    
 ]);
 
 export default router;
