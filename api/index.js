@@ -7,17 +7,19 @@ require("dotenv").config();
 const authRoutes = require("./routes/auth.route");
 const productRoutes = require("./routes/product.route");
 
-// DBconnect();
+DBconnect();
 
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: process.env.ORIGIN,
     credentials: true,
   })
 );
 app.use(cookieParser());
 app.use(express.json())
+
+// console.log(process.env.ORIGIN)
 
 app.use('/', (req, res) => {
   res.send('hello world')
