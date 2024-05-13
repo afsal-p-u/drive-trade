@@ -25,8 +25,8 @@ app.use('/', (req, res) => {
   res.send('hello world')
 })
  
-// app.use("/api/auth", authRoutes);
-// app.use("/api/product", productRoutes);
+// app.use("/api/v1/auth", authRoutes);
+// app.use("/api/v1/product", productRoutes);
 
 const port = process.env.PORT | 5000;
 app.listen(port, console.log("Server running on port ", port));

@@ -1,39 +1,39 @@
-import { Navbar } from "../components";
-import { FaLocationDot } from "react-icons/fa6";
-import { IoSearch } from "react-icons/io5";
-import { FaFilter } from "react-icons/fa";
+import { Navbar, SearchAndFilter, VehicleCard } from "../components";
+import { FaChevronLeft } from "react-icons/fa6";
+import { FaChevronRight } from "react-icons/fa6";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
+      <div className="w-full bg-[#f5f3f3]">
+        <div className="px-[20px] min-h-[88vh] py-5">
+          <div className="bg-[#f8f8f8] border-[1px] shadow-sm border-black/10 mt-10 py-5 px-2 rounded-md">
+            <h3 className="mb-3 text-xl pl-[50px]">Recommended</h3>
 
-      <div className="w-full bg-primary">
-        <div className="px-[50px] min-h-[90vh] py-5">
-          {/* search */}
-          <div className="flex items-center justify-center gap-5">
-            <div className="flex gap-3 items-center px-4 h-10 border-[1px] rounded-2xl cursor-pointer">
-              <div className="">
-                <FaLocationDot />
+            {/* list */}
+            <div className="relative">
+              {/* slider */}
+              <div className="absolute left-0 top-[50%] bg-white rounded-md px-1 py-5 translate-y-[-50%] cursor-pointer">
+                <FaChevronLeft className="text-4xl" />
               </div>
 
-              <p className="text-sm text-gray-500">Kannur</p>
-            </div>
+              <div className="absolute right-0 top-[50%] bg-white rounded-md px-1 py-5 translate-y-[-50%] cursor-pointer">
+                <FaChevronRight className="text-4xl" />
+              </div>
 
-            <div className="px-5 h-10 flex items-center justify-between gap-2 bg-primary border-[1px] rounded-2xl">
-              <input
-                type="search"
-                placeholder="Search here..."
-                className="border-none outline-none bg-transparent text-sm w-[300px]"
-              />
-
-              <IoSearch className="text-lg cursor-pointer" />
-            </div>
-
-            <div className="h-10 w-10 border-[1px] rounded-2xl flex items-center justify-center cursor-pointer">
-              <FaFilter className="text-md" />
+              <div className="px-[50px]">
+                <div className="flex gap-5 overflow-x-scroll vehicle-list-scrollbar">
+                  <VehicleCard />
+                  <VehicleCard />
+                  <VehicleCard />
+                  <VehicleCard />
+                  <VehicleCard />
+                  <VehicleCard />
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </>
