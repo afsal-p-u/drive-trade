@@ -7,8 +7,8 @@ type ItemViewSmImageProps = {
 const ItemViewSmImage = ({ image }: ItemViewSmImageProps) => {
   return (
     <div>
-      <div className="w-[100px] h-[100px]">
-        <img src={image} alt="" />
+      <div className="w-[125px] h-[65px] cursor-pointer">
+        <img src={image} alt="" className="w-full h-full object-cover" />
       </div>
     </div>
   );

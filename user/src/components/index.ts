@@ -11,3 +11,7 @@ export { default as CustomButton } from './CustomButton'
 // item view
 export { default as ItemViewsmImage } from './item-view/ItemViewSmImage'
 export { default as SpecificationItem } from './item-view/SpecificationItem'
+
+// chat
+export { default as ChatUserList } from './chat/ChatUserList'
+export { default as ChatMessage } from './chat/ChatMessage'

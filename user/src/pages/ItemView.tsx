@@ -1,7 +1,11 @@
 import civic from "../assets/civic.jpg";
 import { PiEngineBold } from "react-icons/pi";
 import { LuFuel } from "react-icons/lu";
-import { IoChatboxEllipsesOutline, IoSpeedometerOutline, IoCarSportOutline } from "react-icons/io5";
+import {
+  IoChatboxEllipsesOutline,
+  IoSpeedometerOutline,
+  IoCarSportOutline,
+} from "react-icons/io5";
 import { MdOutlineAirlineSeatReclineNormal } from "react-icons/md";
 import { FaCarSide, FaBookmark, FaRegUser } from "react-icons/fa";
 import { TbManualGearbox } from "react-icons/tb";
@@ -48,15 +52,19 @@ const demmyData = [
 
 const ItemView = () => {
   return (
-    <div className="bg-primary">
-      <div className="px-[20px] min-h-[80vh] flex gap-32">
-        <div className="basis-3/5 flex flex-col py-5">
-          <div className="w-full h-[400px] rounded-sm shadow-md">
-            <img src={civic} alt="" className="w-full h-full object-cover" />
+    <div className="bg-primary min-h-[89vh]">
+      <div className="px-[20px] flex gap-5">
+        <div className="basis-3/5 flex gap-5 py-5">
+          <div className="h-[400px] rounded-sm shadow-md basis-4/5">
+            <img
+              src={civic}
+              alt=""
+              className="w-full h-full object-cover cursor-pointer"
+            />
           </div>
 
-          <div className="mt-3 flex gap-6">
-            <ItemViewsmImage image={civic} />
+          <div className="flex flex-col gap-4 basis-1/5">
+            {/* max 5 images */}
             <ItemViewsmImage image={civic} />
             <ItemViewsmImage image={civic} />
             <ItemViewsmImage image={civic} />
@@ -66,9 +74,14 @@ const ItemView = () => {
         </div>
 
         <div className="basis-2/5 py-5 border-l-[1px] pl-5">
-          <h2 className="text-xl font-medium text-gray-700">
+          <h2 className="text-xl font-medium text-gray-900">
             Honda Civic 2018
           </h2>
+
+          <p className="text-sm my-1 text-gray-800">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            magni ad provident suscipit atque placeat deserunt.
+          </p>
 
           <h1 className="text-2xl font-bold mt-2">5000</h1>
 
