@@ -4,10 +4,10 @@ import { Home, Search } from "./pages"
 
 const Layout = () => {
     return (
-        <>
+        <div>
             <Navbar />
             <Outlet />
-        </>
+        </div>
     )
 }
 

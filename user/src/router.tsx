@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./_layout";
-import { Chat, Home, ItemView, Search } from "./pages";
+import { Chat, Home, ItemView, LandingPage, Search } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -8,7 +8,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: '/',
+        path: '/home',
         element: <Home />
       },
       {
@@ -22,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/chat',
         element: <Chat />
+      },
+      {
+        path: '/',
+        element: <LandingPage />
       },
     ]
   },
