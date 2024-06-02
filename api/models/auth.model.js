@@ -6,7 +6,8 @@ const authSchema = new mongoose.Schema({
     password: { type: String, required: true },
     image: { type: String }, 
     number: { type: Number, required: true },
-    isUser: { type: String, enum: ["user", "seller", "admin"], default: "user" }
+    isUser: { type: String, enum: ["user", "seller", "admin"], default: "user" },
+    isVerfied: { type: Boolean, default: false }
 })
 
 module.exports = mongoose.model("auth", authSchema)

@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { BsChatLeftText } from "react-icons/bs";
 import SearchAndFilter from "./SearchAndFilter";
+import { useLocation } from "react-router-dom";
+import { useAuthControlContext } from "../contexts/AuthControlContext";
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const location = useLocation();
+  const { setAuthControl }: any = useAuthControlContext()
 
   return (
     <div className="w-full bg-[#181818] sticky top-0 z-[999]">
@@ -13,8 +17,10 @@ const Navbar = () => {
           <span className="text-zinc-600">T</span>rade */}
           DriveTrade
         </h1>
-
-        <SearchAndFilter />
+        
+        {location?.pathname !== "/" && (
+          <SearchAndFilter />
+        )}
 
         <div className="flex gap-7 items-center flex-1 justify-end">
           {isLoggedIn ? (
@@ -28,11 +34,15 @@ const Navbar = () => {
               <button
                 className="px-7 py-2 text-sm rounded-lg bg-[#f5f3f3] hover:text-[#f5f3f3]
               hover:bg-transparent border-white border-[1px]"
+              onClick={() => setAuthControl('sign-up')}
               >
                 Get Started
               </button>
 
-              <button className="px-7 py-2 text-sm text-white border-[1px] rounded-lg hover:bg-white hover:text-black">
+              <button 
+                className="px-7 py-2 text-sm text-white border-[1px] rounded-lg hover:bg-white hover:text-black"
+                onClick={() => setAuthControl('sign-in')}
+              >
                 Sign In
               </button>
             </>
