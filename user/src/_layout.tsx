@@ -1,14 +1,17 @@
-import { Outlet } from "react-router-dom"
-import { Navbar } from "./components"
-import { Home, Search } from "./pages"
+import { Navigate, Outlet } from "react-router-dom";
+import { Navbar } from "./components";
+import { Home, LandingPage, Search } from "./pages";
+import { useAuthContext } from "./contexts/AuthContext";
 
 const Layout = () => {
-    return (
-        <div>
-            <Navbar />
-            <Outlet />
-        </div>
-    )
-}
+  const { auth }: any = useAuthContext();
 
-export default Layout
+  return (
+    <div>
+      <Navbar />
+      {auth ? <Outlet /> : <LandingPage /> }
+    </div>
+  );
+};
+
+export default Layout;

@@ -3,6 +3,7 @@ import CustomButton from "./CustomButton";
 import CustomInput from "./CustomInput";
 import { IoMdClose } from "react-icons/io";
 import { useAuthControlContext } from "../contexts/AuthControlContext";
+import apiRequest from "../utils/apiRequest";
 
 const SignUp = () => {
   const [inputs, setInputs] = useState(null);
@@ -14,11 +15,24 @@ const SignUp = () => {
     });
   };
 
-  console.log(inputs);
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    apiRequest
+      .post("/v1/auth/sign-up", inputs)
+      .then(() => {
+        setAuthControl("sign-in");
+      })
+      .catch((err) => {
+        console.log(err.response.data.message);
+      });
+  };
 
   return (
     <div className="w-full box-border top-0 h-[89vh] flex items-center justify-center absolute">
-      <form className="w-[480px] border-[1px] py-5 px-10 rounded-md bg-secondary shadow-lg relative">
+      <form
+        className="w-[480px] border-[1px] py-5 px-10 rounded-md bg-secondary shadow-lg relative"
+        onSubmit={handleSubmit}
+      >
         <div className="absolute text-white right-10 top-5">
           <IoMdClose
             className="text-white text-2xl cursor-pointer"

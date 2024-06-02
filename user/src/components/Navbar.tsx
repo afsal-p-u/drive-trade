@@ -3,11 +3,12 @@ import { BsChatLeftText } from "react-icons/bs";
 import SearchAndFilter from "./SearchAndFilter";
 import { useLocation } from "react-router-dom";
 import { useAuthControlContext } from "../contexts/AuthControlContext";
+import { useAuthContext } from "../contexts/AuthContext";
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const location = useLocation();
   const { setAuthControl }: any = useAuthControlContext()
+  const { auth }: any = useAuthContext()
 
   return (
     <div className="w-full bg-[#181818] sticky top-0 z-[999]">
@@ -23,7 +24,7 @@ const Navbar = () => {
         )}
 
         <div className="flex gap-7 items-center flex-1 justify-end">
-          {isLoggedIn ? (
+          {auth ? (
             <>
               <BsChatLeftText className="text-2xl cursor-pointer text-white" />
 

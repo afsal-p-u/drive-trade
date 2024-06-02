@@ -12,7 +12,7 @@ DBconnect();
 const app = express();
 app.use(
   cors({
-    origin: process.env.ORIGIN,
+    origin: "http://localhost:3001",
     credentials: true,
   })
 );
@@ -20,12 +20,8 @@ app.use(cookieParser());
 app.use(express.json())
 
 // console.log(process.env.ORIGIN)
-
-app.use('/', (req, res) => {
-  res.send('hello world')
-})
  
-// app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/auth", authRoutes);
 // app.use("/api/v1/product", productRoutes);
 
 const port = process.env.PORT | 5000;

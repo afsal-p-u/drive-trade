@@ -1,14 +1,44 @@
+import { useState } from "react";
 import { useAuthControlContext } from "../contexts/AuthControlContext";
+import apiRequest from "../utils/apiRequest";
 import CustomButton from "./CustomButton";
 import CustomInput from "./CustomInput";
 import { IoMdClose } from "react-icons/io";
+import { useAuthContext } from "../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  const [inputs, setInputs] = useState(null);
   const { setAuthControl }: any = useAuthControlContext();
+  const { setAuth }: any = useAuthContext();
+  const navigate = useNavigate()
+
+  const handleChangeInputs = (e: any) => {
+    setInputs((prev: any) => {
+      return { ...prev, [e.target.name]: e.target.value };
+    });
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    apiRequest
+      .post("/v1/auth/sign-in", inputs)
+      .then((res) => {
+        setAuthControl(null);
+        setAuth(res.data.info);
+        navigate('/home')
+      })
+      .catch((err) => {
+        console.log(err.response.data.message);
+      });
+  };
 
   return (
     <div className="w-full h-[89vh] flex items-center justify-center absolute top-0">
-      <form className="w-[480px] border-[1px] py-5 px-10 rounded-md bg-secondary shadow-lg relative">
+      <form
+        className="w-[480px] border-[1px] py-5 px-10 rounded-md bg-secondary shadow-lg relative"
+        onSubmit={handleSubmit}
+      >
         <div className="absolute text-white right-10 top-5">
           <IoMdClose
             className="text-white text-2xl cursor-pointer"
@@ -27,6 +57,7 @@ const SignIn = () => {
             type="email"
             placeholder="Email address"
             required={true}
+            onchange={handleChangeInputs}
           />
           <CustomInput
             label="Password"
@@ -34,6 +65,7 @@ const SignIn = () => {
             type="password"
             placeholder="Password"
             required={true}
+            onchange={handleChangeInputs}
           />
         </div>
 

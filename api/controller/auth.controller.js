@@ -2,7 +2,7 @@ const cryptoJs = require('crypto-js')
 const jwt = require('jsonwebtoken')
 const authModel = require('../models/auth.model')
 
-const loginController = async (req, res) => {
+const signInController = async (req, res) => {
     const { email, password } = req.body
 
     const user = await authModel.findOne({ email })
@@ -33,21 +33,20 @@ const loginController = async (req, res) => {
         httpOnly: true,
         // secure: true,
         maxAge: age
-    }).status(200).json(user._id)
+    }).status(200).json({ info: user._id })
 }   
 
-const registerController = async (req, res) => {
+const signUpController = async (req, res) => {
     const { email, username } = req.body
 
     const user = await authModel.findOne({ email })
     if (user) {
-        return res.status(500).json('Email already in use')
+        return res.status(500).json({ message: "Email already in use!" })
     }
-
 
     const checkUsername = await authModel.findOne({ username })
     if (checkUsername) {
-        return res.status(500).json("Username already exist!")
+        return res.status(500).json({ message: "Username already in use!" })
     }
 
     await new authModel({
@@ -55,11 +54,11 @@ const registerController = async (req, res) => {
         password: cryptoJs.AES.encrypt(req.body.password, process.env.CRYPTOJS_SECRET)
     }).save();
 
-    return res.status(200).json("User registered successfully")
+    return res.status(200).json({ message: "User registered" })
 }
 
-const logoutController = async () => {
+const signOutController = async () => {
 
 }
 
-module.exports = { loginController, registerController, logoutController }
+module.exports = { signInController, signUpController, signOutController }
