@@ -11,24 +11,24 @@ const Navbar = () => {
   const { auth }: any = useAuthContext()
 
   return (
-    <div className="w-full bg-[#181818] sticky top-0 z-[999]">
-      <div className="flex justify-between items-center h-[11vh] px-[20px]">
-        <h1 className="text-2xl font-bold cursor-pointer text-white flex-1">
+    <div className="w-full bg-primary sticky top-0 z-[999]">
+      <div className="flex justify-between items-center h-[11vh] px-[50px]">
+        <h1 className="text-2xl font-bold cursor-pointer text-secondary flex-1">
           {/* <span className="text-zinc-600">D</span>rive
           <span className="text-zinc-600">T</span>rade */}
           DriveTrade
         </h1>
         
-        {location?.pathname !== "/" && (
+        {/* {location?.pathname !== "/" && (
           <SearchAndFilter />
-        )}
+        )} */}
 
         <div className="flex gap-7 items-center flex-1 justify-end">
           {auth ? (
             <>
-              <BsChatLeftText className="text-2xl cursor-pointer text-white" />
+              <BsChatLeftText className="text-2xl cursor-pointer text-light_gray" />
 
-              <div className="w-[35px] h-[35px] rounded-full border-[1px] cursor-pointer"></div>
+              <div className="w-[35px] h-[35px] rounded-full border-[1px] border-[#000]/20 cursor-pointer"></div>
             </>
           ) : (
             <>

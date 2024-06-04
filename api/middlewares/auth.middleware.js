@@ -4,7 +4,7 @@ const isShouldBeSeller = async (req, res, next) => {
     const token = req.cookies.token
 
     if(!token) {
-        return res.status(500).json("Not Authenticated")
+        return res.status(500).json({ message: "Not Authenticated" })
     }
 
     jwt.verify(token, process.env.JWT_SECRETKEY, async (err, payload) => {

@@ -6,6 +6,11 @@ const Home = () => {
   return (
     <>
       <div className="w-full bg-[#f5f3f3]">
+        <div className="">
+          <img src="" alt="" />
+        </div>
+
+
         <div className="px-[20px] min-h-[88vh] py-5">
           <div className="bg-[#f8f8f8] border-[1px] shadow-sm border-black/10 mt-10 py-5 px-2 rounded-md">
             <h3 className="mb-3 text-xl pl-[50px]">Recommended</h3>
