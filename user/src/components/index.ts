@@ -8,6 +8,7 @@ export { default as VehicleCard } from './VehicleCard'
 export { default as Sidebar } from './Sidebar'
 export { default as CustomButton } from './CustomButton'
 export { default as CustomInput } from './CustomInput'
+export { default as Footer } from './Footer'
 
 // item view
 export { default as ItemViewsmImage } from './item-view/ItemViewSmImage'
