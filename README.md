@@ -51,22 +51,23 @@ npm run dev
 # Contributing
 Contributions are welcome and encouraged! If you'd like to contribute to the project, please follow these steps:
 
-Fork the repository.
-Create a new branch for your feature or bug fix: git checkout -b feature-name.
-Make your changes and commit them: git commit -m 'Add new feature'.
-Push to the branch: git push origin feature-name.
-Submit a pull request detailing your changes.
-License
+- **Fork the repository.
+- **Create a new branch for your feature or bug fix: git checkout -b feature-name.
+- **Make your changes and commit them: git commit -m 'Add new feature'.
+- **Push to the branch: git push origin feature-name.
+- **Submit a pull request detailing your changes.
+  
+## License
 This project is licensed under the MIT License.
 
 # Acknowledgements:
-React - A JavaScript library for building user interfaces.
-Node.js - A JavaScript runtime built on Chrome's V8 JavaScript engine.
-Express.js - A web application framework for Node.js.
-MongoDB - A document-oriented NoSQL database.
-JWT - JSON Web Tokens for authentication.
-Stripe - Payment processing platform.
-Contact
-
+- **React - A JavaScript library for building user interfaces.
+- **Node.js - A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **Express.js - A web application framework for Node.js.
+- **MongoDB - A document-oriented NoSQL database.
+- **JWT - JSON Web Tokens for authentication.
+- **Stripe - Payment processing platform.
+  
+## Contact
 For any questions or inquiries about the project, feel free to contact us at your-email@example.com.
 
