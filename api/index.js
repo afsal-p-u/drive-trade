@@ -2,12 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
-const { DBconnect } = require("./utils/db");
+// const { DBconnect } = require("./utils/db");
 
-const authRoutes = require("./routes/auth.route");
-const productRoutes = require("./routes/product.route");
+// const authRoutes = require("./routes/auth.route");
+// const productRoutes = require("./routes/product.route");
 
-DBconnect();
+// DBconnect();
 
 const app = express();
 app.use(
@@ -21,7 +21,7 @@ app.use(express.json())
 
 // console.log(process.env.ORIGIN)
  
-app.use("/api/v1/auth", authRoutes);
+// app.use("/api/v1/auth", authRoutes);
 // app.use("/api/v1/product", productRoutes);
 
 const port = process.env.PORT | 5000;
