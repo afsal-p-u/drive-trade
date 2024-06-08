@@ -56,7 +56,7 @@ Contributions are welcome and encouraged! If you'd like to contribute to the pro
 - **Make your changes and commit them: git commit -m 'Add new feature'.**
 - **Push to the branch: git push origin feature-name.**
 - **Submit a pull request detailing your changes.**
-  
+
 ## License
 This project is licensed under the Apache-2.0 License.
 
@@ -67,7 +67,6 @@ This project is licensed under the Apache-2.0 License.
 - **MongoDB** - A document-oriented NoSQL database.
 - **JWT** - JSON Web Tokens for authentication.
 - **Stripe** - Payment processing platform.
-  
+
 ## Contact
 For any questions or inquiries about the project, feel free to contact us at drivetradenew@gmail.com.
-
