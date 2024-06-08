@@ -1,5 +1,3 @@
-import React from "react";
-
 const DealsCard = ({ image }: any) => {
   return (
     <div className="rounded-3xl overflow-hidden relative">
@@ -15,27 +13,23 @@ const DealsCard = ({ image }: any) => {
         <div className="mt-2 mb-2 border-t-[1px] border-light_gray w-full" />
 
         <div className="flex gap-5 mb-4">
-          <div className="flex items-center flex-col gap-1">
-            <p className="text-primary text-xs">Transition</p>
-
-            <p className="text-primary text-sm font-medium">Automatic</p>
-          </div>
-
-          <div className="flex items-center flex-col gap-1">
-            <p className="text-primary text-xs">Fuel</p>
-
-            <p className="text-primary text-sm font-medium">Electric</p>
-          </div>
-
-          <div className="flex items-center flex-col gap-1">
-            <p className="text-primary text-xs">Passenger</p>
-
-            <p className="text-primary text-sm font-medium">04 Person</p>
-          </div>
+          <DealsCardFeature item="Transmission" value="Automatic" />
+          <DealsCardFeature item="Fuel" value="Electric" />
+          <DealsCardFeature item="Passenger" value="04 Person" />
         </div>
       </div>
     </div>
   );
 };
+
+const DealsCardFeature = ({ item, value }: any) => {
+  return (
+    <div className="flex items-center flex-col gap-1">
+      <p className="text-primary text-xs">{item}</p>
+
+      <p className="text-primary text-sm font-medium">{value}</p>
+    </div>
+  )
+}
 
 export default DealsCard;

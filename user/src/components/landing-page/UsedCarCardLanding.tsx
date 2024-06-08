@@ -1,5 +1,3 @@
-import React from "react";
-
 const UsedCarCardHome = ({ image }: any) => {
   return (
     <div className="px-3 pt-3 pb-7 bg-primary shadow-md rounded-3xl overflow-hidden">

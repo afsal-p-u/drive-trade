@@ -1,5 +1,3 @@
-import React from "react";
-
 const BrandImage = ({ image }: any) => {
   return (
     <div className="w-[35px] h-[35px]">

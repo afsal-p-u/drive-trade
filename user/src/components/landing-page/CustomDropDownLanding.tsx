@@ -1,4 +1,3 @@
-
 const CustomDropDownHome = ({ name }: any) => {
   return (
     <select
