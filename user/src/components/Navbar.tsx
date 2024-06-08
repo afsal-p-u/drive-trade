@@ -12,11 +12,11 @@ const Navbar = () => {
 
         <div className="flex items-center gap-5">
           <ul className="flex gap-5 text-sm">
-            <li className="text-secondary font-medium cursor-pointer">Home</li>
-            <li className=" font-medium cursor-pointer">Cars</li>
-            <li className=" font-medium cursor-pointer">About</li>
-            <li className=" font-medium cursor-pointer">Blog</li>
-            <li className=" font-medium cursor-pointer">Contact us</li>
+            <NavItem name="Home" active={true} />
+            <NavItem name="Cars" />
+            <NavItem name="About" />
+            <NavItem name="Blog" />
+            <NavItem name="About us" />
           </ul>
 
           <div className="flex items-center gap-1">
@@ -33,5 +33,11 @@ const Navbar = () => {
     </div>
   );
 };
+
+const NavItem = ({ name, active }: any) => {
+  return (
+    <li className={`font-medium cursor-pointer ${active && 'text-secondary'}`}>{name}</li>
+  )
+}
 
 export default Navbar;

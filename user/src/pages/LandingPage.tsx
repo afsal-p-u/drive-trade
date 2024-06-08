@@ -1,40 +1,29 @@
-import heroImage from "../assets/home/hero-car.png";
-import {
-  BrandImage,
-  CustomDropDownHome,
-  DealsCard,
-  Footer,
-  Navbar,
-  UsedCarCardHome,
-} from "../components";
 import { CiSearch } from "react-icons/ci";
-import brand0 from "../assets/home/pngwing.com.png";
-import brand1 from "../assets/home/pngwing.com (1).png";
-import brand2 from "../assets/home/pngwing.com (2).png";
-import brand3 from "../assets/home/pngwing.com (3).png";
-import brand4 from "../assets/home/pngwing.com (4).png";
-import brand5 from "../assets/home/pngwing.com (5).png";
-import brand6 from "../assets/home/pngwing.com (6).png";
-
-import topdeal1 from "../assets/home/top-deal/img1.png";
-import topdeal2 from "../assets/home/top-deal/img2.png";
-import topdeal3 from "../assets/home/top-deal/img3.png";
-import topdeal4 from "../assets/home/top-deal/img4.png";
-
-import img5 from "../assets/home/img5.png";
-
-import usedcar from "../assets/home/top-search/used-car.png";
-import c1 from "../assets/home/top-search/c1.png";
-import c2 from "../assets/home/top-search/c2.png";
-import c3 from "../assets/home/top-search/c3.png";
-
-import abot from "../assets/home/abt-c.png";
-import contact from "../assets/home/contact.png";
-
 import { FaRegHandshake } from "react-icons/fa";
 import { GiReceiveMoney } from "react-icons/gi";
-import { IoIosArrowForward } from "react-icons/io";
 import { MdPhoneMissed } from "react-icons/md";
+import {
+  BenefitCardLanding,
+  BrandImage,
+  CustomDropDownLanding,
+  DealsCard,
+  Faq,
+  SmallTouchBar,
+  UsedCarCardLanding,
+} from "../components/landing-page";
+import { Footer, Navbar } from "../components";
+import {
+  brand1,
+  brand2,
+  brand3,
+  brand4,
+  brand5,
+  brand6,
+  brand7,
+} from "../assets/landing-page";
+import { deal1, deal2, deal3, deal4 } from "../assets/landing-page";
+import { usedCar1, usedCar2, usedCar3 } from "../assets/landing-page";
+import { benefits, contact, feature, hero, used } from "../assets/landing-page";
 
 const Home = () => {
   return (
@@ -56,9 +45,9 @@ const Home = () => {
           </p>
 
           <div className="flex items-center mt-5 gap-5">
-            <CustomDropDownHome name="All Models" />
-            <CustomDropDownHome name="Year" />
-            <CustomDropDownHome name="Max Price" />
+            <CustomDropDownLanding name="All Models" />
+            <CustomDropDownLanding name="Year" />
+            <CustomDropDownLanding name="Max Price" />
 
             <div className="p-3 rounded-md flex items-center justify-center bg-secondary">
               <CiSearch className="text-primary text-xl cursor-pointer" />
@@ -66,28 +55,24 @@ const Home = () => {
           </div>
 
           <div className="mt-4">
-            <p className="text-light_gray font-medium">Popular brnds</p>
+            <p className="text-light_gray font-medium">Popular brands</p>
 
             <div className="mt-2">
               <div className="flex gap-4">
-                <BrandImage image={brand0} />
                 <BrandImage image={brand1} />
                 <BrandImage image={brand2} />
                 <BrandImage image={brand3} />
                 <BrandImage image={brand4} />
                 <BrandImage image={brand5} />
                 <BrandImage image={brand6} />
+                <BrandImage image={brand7} />
               </div>
             </div>
           </div>
         </div>
 
         <div className="basis-2/5 w-full h-full">
-          <img
-            src={heroImage}
-            alt=""
-            className="w-full h-full rounded-bl-[100px]"
-          />
+          <img src={hero} alt="" className="w-full h-full rounded-bl-[100px]" />
         </div>
       </div>
 
@@ -97,24 +82,24 @@ const Home = () => {
         </h1>
 
         <div className="mt-10 flex gap-5 justify-between w-full">
-          <DealsCard image={topdeal1} />
-          <DealsCard image={topdeal2} />
-          <DealsCard image={topdeal3} />
-          <DealsCard image={topdeal4} />
+          <DealsCard image={deal1} />
+          <DealsCard image={deal2} />
+          <DealsCard image={deal3} />
+          <DealsCard image={deal4} />
         </div>
 
         <div className="mt-10 flex items-center justify-center gap-3">
-          <div className="w-[18px] h-[5px] bg-light_gray rounded-xl cursor-pointer"></div>
-          <div className="w-[18px] h-[5px] bg-light_gray rounded-xl cursor-pointer"></div>
-          <div className="w-[18px] h-[5px] bg-light_gray rounded-xl cursor-pointer"></div>
-          <div className="w-[18px] h-[5px] bg-light_gray rounded-xl cursor-pointer"></div>
-          <div className="w-[25px] h-[5px] bg-black rounded-xl cursor-pointer"></div>
+          <SmallTouchBar active={false} />
+          <SmallTouchBar active={false} />
+          <SmallTouchBar active={false} />
+          <SmallTouchBar active={false} />
+          <SmallTouchBar active={true} />
         </div>
       </div>
 
       <div className="bg-light_primary px-[100px] py-[70px] flex gap-10">
         <div className="flex-1">
-          <img src={img5} alt="" />
+          <img src={feature} alt="" />
         </div>
 
         <div className="flex-1 flex justify-center flex-col">
@@ -153,16 +138,16 @@ const Home = () => {
             </button>
           </div>
 
-          <img src={usedcar} alt="" className="mt-16" />
+          <img src={used} alt="" className="mt-16" />
         </div>
 
         <div className="basis-2/3 flex flex-wrap gap-3 justify-between">
-          <UsedCarCardHome image={c1} />
-          <UsedCarCardHome image={c2} />
-          <UsedCarCardHome image={c3} />
-          <UsedCarCardHome image={c1} />
-          <UsedCarCardHome image={c2} />
-          <UsedCarCardHome image={c3} />
+          <UsedCarCardLanding image={usedCar1} />
+          <UsedCarCardLanding image={usedCar2} />
+          <UsedCarCardLanding image={usedCar3} />
+          <UsedCarCardLanding image={usedCar1} />
+          <UsedCarCardLanding image={usedCar2} />
+          <UsedCarCardLanding image={usedCar3} />
         </div>
       </div>
 
@@ -181,36 +166,13 @@ const Home = () => {
           </p>
 
           <div className="flex mt-5 gap-5">
-            <div className="p-5 px-10 bg-primary rounded-xl shadow-sm flex items-center justify-center flex-col">
-              <FaRegHandshake className="text-5xl mb-3" />
-
-              <p className="text-md font-medium text-center">
-                Trusted by <br /> our clients
-              </p>
-
-              <p className="mt-2 text-sm text-light_gray text-center">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </div>
-
-            <div className="py-10 px-10 bg-primary rounded-xl shadow-sm flex items-center justify-center flex-col">
-              <GiReceiveMoney className="text-5xl mb-3" />
-
-              <p className="text-md font-medium text-center">
-                Fast & easy <br /> financing
-              </p>
-
-              <p className="mt-2 text-sm text-light_gray text-center">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </div>
+            <BenefitCardLanding text="Trusted by our clients" icon={FaRegHandshake} />
+            <BenefitCardLanding text={`Fast & easy financing`} icon={GiReceiveMoney} />
           </div>
         </div>
 
         <div className="flex-1">
-          <img src={abot} alt="" />
+          <img src={benefits} alt="" />
         </div>
       </div>
 
@@ -218,36 +180,18 @@ const Home = () => {
         <h1 className="text-center text-5xl font-semibold">FAQ</h1>
 
         <div className="mt-10 flex flex-col gap-5">
-          <div className="px-7 py-4 bg-white rounded-md flex items-center justify-between cursor-pointer">
-            <p className="font-medium text-sm">
-              How do I know if a car listed on the site is reliable?
-            </p>
-
-            <IoIosArrowForward className="text-2xl cursor-pointer" />
-          </div>
-
-          <div className="px-7 py-4 bg-white rounded-md flex items-center justify-between cursor-pointer">
-            <p className="font-medium text-sm">
-              Are there any fees for buying or selling a car on your website?
-            </p>
-
-            <IoIosArrowForward className="text-2xl cursor-pointer" />
-          </div>
-
-          <div className="px-7 py-4 bg-white rounded-md flex items-center justify-between cursor-pointer">
-            <p className="font-medium text-sm">
-              What should I do if I encounter a problem with a transaction?
-            </p>
-
-            <IoIosArrowForward className="text-2xl cursor-pointer" />
-          </div>
+          <Faq text="What should I do if I encounter a problem with a transaction?" />
+          <Faq text="Are there any fees for buying or selling a car on your website?" />
+          <Faq text="How do I know if a car listed on the site is reliable?" />
         </div>
       </div>
 
       <div className="px-[100px] bg-light_primary py-[70px]">
         <div className="px-10 py-10 flex gap-10 bg-primary rounded-md shadow-sm">
           <div className="basis-3/5 flex flex-col justify-center">
-            <h3 className="text-4xl font-semibold">Get hassel free response on your any queries? Contact us</h3>
+            <h3 className="text-4xl font-semibold">
+              Get hassel free response on your any queries? Contact us
+            </h3>
 
             <p className="mt-3 text-light_gray text-sm">
               Feel free to call our dealership for personalized assistance,
@@ -272,7 +216,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </>
   );
