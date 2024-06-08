@@ -27,12 +27,12 @@ To get started with the project, follow these steps:
 
 1. Clone the repository to your local machine:
 ```bash
-git clone https://github.com/your-username/vehicle-reselling-website.git
+git clone https://github.com/afsal-p-u/drive-trade.git
 ```
 
 2. Install dependencies:
 ```
-cd vehicle-reselling-website
+cd user && cd seller && cd api && cd admin
 npm install
 ```
 
@@ -45,7 +45,7 @@ Add environment variables such as database connection URI, JWT secret, and any o
 npm run dev
 ```
 
-5. Open your web browser and navigate to http://localhost:3000 to view the website.
+5. Open your web browser and navigate to http://localhost:3000, http://localhost:3001, http://localhost:3002 to view the website.
 
 
 # Contributing
@@ -58,7 +58,7 @@ Contributions are welcome and encouraged! If you'd like to contribute to the pro
 - **Submit a pull request detailing your changes.**
   
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the Apache-2.0 License.
 
 # Acknowledgements:
 - **React** - A JavaScript library for building user interfaces.
@@ -69,5 +69,5 @@ This project is licensed under the MIT License.
 - **Stripe** - Payment processing platform.
   
 ## Contact
-For any questions or inquiries about the project, feel free to contact us at your-email@example.com.
+For any questions or inquiries about the project, feel free to contact us at drivetradenew@gmail.com.
 
