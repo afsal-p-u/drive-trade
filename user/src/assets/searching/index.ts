@@ -1,0 +1,5 @@
+export { default as mainBanner } from './main-banner.png'
+export { default as sideBanner } from './side-banner.png'
+export { default as carCard1 } from './car-card1.png'
+export { default as carCard2 } from './car-card2.png'
+export { default as carCard3 } from './car-card3.png'
