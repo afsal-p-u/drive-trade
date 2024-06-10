@@ -11,7 +11,6 @@ import {
   SmallTouchBar,
   UsedCarCardLanding,
 } from "../components/landing-page";
-import { Footer, Navbar } from "../components";
 import {
   brand1,
   brand2,
@@ -28,8 +27,6 @@ import { benefits, contact, feature, hero, used } from "../assets/landing-page";
 const Home = () => {
   return (
     <>
-      <Navbar />
-
       <div className="bg-light_primary pl-[100px] h-[85vh] w-full flex  items-center gap-5">
         <div className="basis-3/5">
           <p className="text-black font-medium text-sm mb-1">DriveTrade</p>
@@ -216,8 +213,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };
