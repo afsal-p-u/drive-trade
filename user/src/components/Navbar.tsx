@@ -1,4 +1,5 @@
 import { CiUser } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -6,14 +7,20 @@ const Navbar = () => {
       <div className="h-[65px] flex justify-between items-center">
         <div className="">
           <h1 className="text-2xl font-bold">
-            Drive<span className="text-secondary">Trade</span>
+            <Link to="/">
+              Drive<span className="text-secondary">Trade</span>
+            </Link>
           </h1>
         </div>
 
         <div className="flex items-center gap-5">
           <ul className="flex gap-5 text-sm">
-            <NavItem name="Home" active={true} />
-            <NavItem name="Cars" />
+            <Link to="/">
+              <NavItem name="Home" active={true} />
+            </Link>
+            <Link to="/search">
+              <NavItem name="Cars" />
+            </Link>
             <NavItem name="About" />
             <NavItem name="Blog" />
             <NavItem name="About us" />

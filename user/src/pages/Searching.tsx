@@ -1,14 +1,11 @@
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import { Footer, Navbar } from "../components";
 import { FilterSearch, PaginationButton, VehicleCard } from "../components/searching";
 import { carCard1, carCard2, carCard3, mainBanner, sideBanner } from "../assets/searching";
 
 const Searching = () => {
   return (
     <>
-      <Navbar />
-
       <div className="px-[100px] flex gap-5 justify-between items-start bg-light_primary py-[20px]">
         <div className="basis-1/5">
           <div className="bg-primary rounded-md shadow-sm pt-2 pb-5 px-4">
@@ -86,8 +83,6 @@ const Searching = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };
