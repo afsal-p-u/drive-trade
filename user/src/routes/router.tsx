@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { LandingPage, Searching } from "../pages";
+import { Home, LandingPage, Searching } from "../pages";
 import Layout from "../layouts/_layout";
 
 const router = createBrowserRouter([
@@ -14,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: "/search",
         element: <Searching />
+      },
+      {
+        path: "/home",
+        element: <Home />
       }
     ]
   },

@@ -1,6 +1,9 @@
-const VehicleCard = ({ image }: any) => {
+const VehicleCard = ({ image, styles }: any) => {
   return (
-    <div className="px-3 py-3 basis-1/3 max-w-[290px] bg-primary shadow-md rounded-3xl overflow-hidden">
+    <div 
+      className={`px-3 pt-3 basis-1/3 max-w-[290px] bg-primary shadow-md rounded-3xl overflow-hidden
+        ${styles ? styles : 'pb-3'}
+    `}>
       <div className="rounded-t-3xl overflow-hidden">
         <img src={image} alt="" className="w-full" />
       </div>
