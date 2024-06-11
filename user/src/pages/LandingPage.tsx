@@ -9,7 +9,6 @@ import {
   DealsCard,
   Faq,
   SmallTouchBar,
-  UsedCarCardLanding,
 } from "../components/landing-page";
 import {
   brand1,
@@ -23,6 +22,7 @@ import {
 import { deal1, deal2, deal3, deal4 } from "../assets/landing-page";
 import { usedCar1, usedCar2, usedCar3 } from "../assets/landing-page";
 import { benefits, contact, feature, hero, used } from "../assets/landing-page";
+import { VehicleCard } from "../components";
 
 const Home = () => {
   return (
@@ -138,13 +138,13 @@ const Home = () => {
           <img src={used} alt="" className="mt-16" />
         </div>
 
-        <div className="basis-2/3 flex flex-wrap gap-3 justify-between">
-          <UsedCarCardLanding image={usedCar1} />
-          <UsedCarCardLanding image={usedCar2} />
-          <UsedCarCardLanding image={usedCar3} />
-          <UsedCarCardLanding image={usedCar1} />
-          <UsedCarCardLanding image={usedCar2} />
-          <UsedCarCardLanding image={usedCar3} />
+        <div className="basis-2/3 grid grid-cols-3 gap-5">
+          <VehicleCard image={usedCar1} styles="pb-7" />
+          <VehicleCard image={usedCar2} styles="pb-7" />
+          <VehicleCard image={usedCar3} styles="pb-7" />
+          <VehicleCard image={usedCar1} styles="pb-7" />
+          <VehicleCard image={usedCar2} styles="pb-7" />
+          <VehicleCard image={usedCar3} styles="pb-7" />
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import { FilterSearch, PaginationButton, VehicleCard } from "../components/searching";
+import { VehicleCard } from "../components";
+import { FilterSearch, PaginationButton } from "../components/searching";
 import { carCard1, carCard2, carCard3, mainBanner, sideBanner } from "../assets/searching";
 
 const Searching = () => {
@@ -60,7 +61,7 @@ const Searching = () => {
             </div>
           </div>
 
-          <div className="flex mt-7 flex-wrap gap-4">
+          <div className="mt-7 grid grid-cols-3 gap-5">
             <VehicleCard image={carCard1} />
             <VehicleCard image={carCard2} />
             <VehicleCard image={carCard3} />
