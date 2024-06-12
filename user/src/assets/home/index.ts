@@ -7,3 +7,5 @@ export { default as type4 } from './vehicle-type/type4.png'
 export { default as type5 } from './vehicle-type/type5.png'
 
 export { default as car1 } from './product-car.png'
+
+export { default as ads1 } from './best-car.png'

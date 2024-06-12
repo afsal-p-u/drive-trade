@@ -1,7 +1,11 @@
-import { car1, mainHome, type1, type2, type3, type4, type5 } from "../assets/home"
-import { CarType } from "../components/home"
+import { ads1, car1, mainHome, type1, type2, type3, type4, type5 } from "../assets/home"
+import { CarType, FeatureItem } from "../components/home"
 import { IoArrowRedoOutline } from "react-icons/io5";
 import { VehicleCard } from "../components";
+import { LuFuel } from "react-icons/lu";
+import { IoSpeedometerOutline } from "react-icons/io5";
+import { TbManualGearbox } from "react-icons/tb";
+import { SlCalender } from "react-icons/sl";
 
 const Home = () => {
   return (
@@ -59,6 +63,36 @@ const Home = () => {
         <h1 className="text-3xl font-semibold">Explore Our Premium Brands</h1>
 
         <div className="mt-5"></div>
+      </div>
+
+      <div className="py-[70px] relative bg-light_primary">
+        <div className="w-full relative">
+          <img src={ads1} alt="" />
+
+          <div className="px-[50px] w-full absolute top-[50%] translate-y-[-50%] flex justify-between items-center">
+            <div className="">
+              <p className="text-lg font-semibold text-primary">$165,000</p>
+
+              <h1 className="font-medium text-4xl mt-1 text-primary">Ranger Black -</h1>
+
+              <h1 className="font-medium text-4xl mt-1 text-primary">2021</h1>
+            </div>
+
+            <div className="py-5 ps-5 pe-14 bg-primary/10 rounded-md ">
+              <div className="flex flex-col gap-2">
+                <FeatureItem icon={LuFuel} label1="Petrol" label2="Fuel Type" />
+                <FeatureItem icon={IoSpeedometerOutline} label1="250 Miles" label2="Mileage" />
+                <FeatureItem icon={TbManualGearbox} label1="Manuel" label2="Transmission" />
+                <FeatureItem icon={SlCalender} label1="Year" label2="2023" />
+              </div>
+              
+              <button className="px-7 py-2 text-xs font-medium bg-primary rounded-md mt-5">
+                View
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   )
