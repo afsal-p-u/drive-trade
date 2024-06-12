@@ -1,3 +1,5 @@
 export { default as Navbar } from './Navbar'
 export { default as Footer } from './Footer'
 export { default as VehicleCard } from './VehicleCard'
+export { default as DealsCard } from './DealsCard'
+export { default as SmallTouchBar} from './SmallTouchBar'
