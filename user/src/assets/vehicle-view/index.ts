@@ -1,0 +1,5 @@
+export { default as carViewImage } from './car-view.png'
+export { default as carView1 } from './car-view-images/c1.png'
+export { default as carView2 } from './car-view-images/c2.png'
+export { default as carView3 } from './car-view-images/c3.png'
+export { default as carView4 } from './car-view-images/c4.png'
