@@ -6,9 +6,7 @@ import {
   BenefitCardLanding,
   BrandImage,
   CustomDropDownLanding,
-  DealsCard,
   Faq,
-  SmallTouchBar,
 } from "../components/landing-page";
 import {
   brand1,
@@ -22,7 +20,7 @@ import {
 import { deal1, deal2, deal3, deal4 } from "../assets/landing-page";
 import { usedCar1, usedCar2, usedCar3 } from "../assets/landing-page";
 import { benefits, contact, feature, hero, used } from "../assets/landing-page";
-import { VehicleCard } from "../components";
+import { DealsCard, SmallTouchBar, VehicleCard } from "../components";
 
 const Home = () => {
   return (
@@ -73,12 +71,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full h-[85vh] px-[50px] py-[70px] bg-light_primary">
+      <div className="w-full px-[50px] py-[70px] bg-light_primary">
         <h1 className="text-center font-semibold text-5xl">
           Top deals car of the week
         </h1>
 
-        <div className="mt-10 flex gap-5 justify-between w-full">
+        <div className="mt-10 grid grid-cols-4 gap-5 w-full">
           <DealsCard image={deal1} />
           <DealsCard image={deal2} />
           <DealsCard image={deal3} />
