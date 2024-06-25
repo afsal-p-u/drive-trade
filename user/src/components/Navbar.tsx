@@ -1,7 +1,10 @@
 import { CiUser } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+  const path = location?.pathname
+
   return (
     <div className="bg-primary w-full px-[100px]">
       <div className="h-[65px] flex justify-between items-center">
