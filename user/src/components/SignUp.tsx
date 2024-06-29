@@ -21,7 +21,7 @@ const SignUp = () => {
         <h1 className="text-center font-semibold text-3xl">Sign Up</h1>
 
         <p className="text-sm text-center mt-1 text-light_gray">
-          Already have an account? <span className="text-secondary">Login</span>
+          Already have an account? <span className="text-secondary">SignIn</span>
         </p>
 
         <div className="mt-7 w-full px-10 flex flex-col gap-4">
@@ -30,7 +30,7 @@ const SignUp = () => {
           <CustomInput icon={CiPhone} placeholder="Enter phone number" />
           <CustomInput icon={CiLock} placeholder="Enter password" />
 
-          <CustomButton text="Register" />
+          <CustomButton text="SignUp" />
         </div>
 
         <div className="mt-4 px-10 flex justify-center flex-col gap-3 items-center">

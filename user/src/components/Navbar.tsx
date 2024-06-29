@@ -19,14 +19,17 @@ const Navbar = () => {
         <div className="flex items-center gap-5">
           <ul className="flex gap-5 text-sm">
             <Link to="/">
-              <NavItem name="Home" active={true} />
+              <NavItem name="Home" active={path === "/" ? true : false} />
             </Link>
             <Link to="/search">
-              <NavItem name="Cars" />
+              <NavItem name="Cars" active={path === "/search" ? true : false} />
             </Link>
-            <NavItem name="About" />
-            <NavItem name="Blog" />
-            <NavItem name="About us" />
+            <Link to="/about">
+              <NavItem name="About Us" active={path === "/about" ? true : false} />
+            </Link>
+            <Link to="/contact">
+              <NavItem name="Contact Us" active={path === "/contact" ? true : false} />
+            </Link>
           </ul>
 
           <div className="flex items-center gap-1">
