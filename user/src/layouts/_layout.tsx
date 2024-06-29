@@ -1,4 +1,4 @@
-import { Footer, Navbar, SignIn, SignUp } from '../components'
+import { ChangePassword, Footer, ForgotPassword, Navbar, OTPVerification, SignIn, SignUp } from '../components'
 import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
@@ -8,7 +8,11 @@ const Layout = () => {
         <Outlet />
         <Footer />
 
-        <SignUp />
+        {/* <SignUp /> */}
+        {/* <SignIn /> */}
+        {/* <ForgotPassword /> */}
+        {/* <OTPVerification /> */}
+        {/* <ChangePassword /> */}
     </div>
   )
 }
