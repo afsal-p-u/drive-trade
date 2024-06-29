@@ -6,9 +6,9 @@ const DealsCard = ({ image }: any) => {
       <div className="bg-[#00000056] w-full h-full absolute z-[1] top-0 lef-0"></div>
 
       <div className="absolute w-full bottom-0 flex items-center justify-center flex-col z-[2] px-5">
-        <h3 className="text-primary text-xl font-medium">Mercedes-benz-2023</h3>
+        <h3 className="text-primary text-xl font-medium max-xl:text-lg max-lg:text-md max-xl:text-center">Mercedes-benz-2023</h3>
 
-        <p className="text-primary mt-2 text-md font-normal">$37,309.00</p>
+        <p className="text-primary mt-2 text-md font-normal max-xl:text-lg max-lg:text-md">$37,309.00</p>
 
         <div className="mt-2 mb-2 border-t-[1px] border-light_gray w-full" />
 
@@ -27,7 +27,7 @@ const DealsCardFeature = ({ item, value }: any) => {
     <div className="flex items-center flex-col gap-1">
       <p className="text-primary text-xs">{item}</p>
 
-      <p className="text-primary text-sm font-medium">{value}</p>
+      <p className="text-primary text-sm font-medium max-lg:text-center max-lg:text-xs">{value}</p>
     </div>
   )
 }
