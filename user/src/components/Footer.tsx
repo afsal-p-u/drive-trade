@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <div className="bg-primary px-[100px] pt-[70px]">
-      <div className="pb-[70px] flex gap-16">
-        <div className="flex gap-5 basis-3/5 justify-between">
+    <div className="bg-primary px-[100px] pt-[70px] max-xl:px-[30px]">
+      <div className="pb-[70px] flex gap-16 max-md:flex-col-reverse">
+        <div className="flex gap-10 basis-3/5 justify-between max-sm:flex-wrap max-sm:justify-center">
           <FooterCategory
             item="Vehicle Type"
             list={["Sedan", "XUV", "Notchback", "Bus", "Hatchback"]}
@@ -58,7 +58,7 @@ const Footer = () => {
       </div>
 
       <div className="py-5 flex items-center justify-center border-t-[1px]">
-        <p className="text-xs font-medium text-light_gray">
+        <p className="text-xs font-medium text-light_gray max-md:text-center">
           Copyright @ 2024. All rights reserved. Powered by{" "}
           <span className="text-secondary">DriveTrade</span>
         </p>

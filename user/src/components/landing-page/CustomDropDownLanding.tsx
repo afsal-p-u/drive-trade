@@ -3,7 +3,8 @@ const CustomDropDownHome = ({ name }: any) => {
     <select
       name=""
       id=""
-      className="px-7 py-3 border-[1px] rounded-md text-sm cursor-pointer font-medium outline-secondary min-w-[180px]"
+      className="px-7 py-3 border-[1px] rounded-md text-sm cursor-pointer font-medium outline-secondary min-w-[180px]
+      max-xl:text-xs"
     >
       <option value="" className="cursor-pointer">
         {name}

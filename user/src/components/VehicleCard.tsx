@@ -1,7 +1,7 @@
 const VehicleCard = ({ image, styles }: any) => {
   return (
     <div 
-      className={`px-3 pt-3 basis-1/3 max-w-[290px] bg-primary shadow-md rounded-3xl overflow-hidden
+      className={`px-3 pt-3 basis-1/3 max-w-[290px] max-sm:max-w-[100%] bg-primary shadow-md rounded-3xl overflow-hidden
         ${styles ? styles : 'pb-3'}
     `}>
       <div className="rounded-t-3xl overflow-hidden">
@@ -20,13 +20,13 @@ const VehicleCard = ({ image, styles }: any) => {
         <div className="border-t-[2px] w-full my-1"></div>
 
         <div className="flex gap-3 mt-2 mb-2">
-          <p className="px-2 py-1 bg-primary rounded-md font-medium text-sm">
+          <p className="px-2 py-1 bg-primary rounded-md font-medium text-sm max-md:text-xs">
             2023
           </p>
 
-          <p className="px-2 py-1 rounded-md font-medium text-sm">Automatic</p>
+          <p className="px-2 py-1 rounded-md font-medium text-sm max-md:text-xs">Automatic</p>
 
-          <p className="px-2 py-1 rounded-md font-medium text-sm">Petrol</p>
+          <p className="px-2 py-1 rounded-md font-medium text-sm max-md:text-xs">Petrol</p>
         </div>
       </div>
     </div>
