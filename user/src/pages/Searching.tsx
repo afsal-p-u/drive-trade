@@ -1,5 +1,7 @@
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { MdOutlineSort } from "react-icons/md";
+import { IoFilterOutline } from "react-icons/io5";
 import { VehicleCard } from "../components";
 import { FilterSearch, PaginationButton } from "../components/searching";
 import { carCard1, carCard2, carCard3, mainBanner, sideBanner } from "../assets/searching";
@@ -7,8 +9,8 @@ import { carCard1, carCard2, carCard3, mainBanner, sideBanner } from "../assets/
 const Searching = () => {
   return (
     <>
-      <div className="px-[100px] flex gap-5 justify-between items-start bg-light_primary py-[20px]">
-        <div className="basis-1/5">
+      <div className="px-[100px] max-xl:px-[30px] flex gap-5 justify-between items-start bg-light_primary py-[20px]">
+        <div className="basis-1/5 max-md:hidden">
           <div className="bg-primary rounded-md shadow-sm pt-2 pb-5 px-4">
             <FilterSearch
               item="All Models"
@@ -48,8 +50,8 @@ const Searching = () => {
           </div>
         </div>
 
-        <div className="basis-4/5">
-          <div className="bg-primary h-[200px] shadow-sm rounded-2xl overflow-hidden relative">
+        <div className="md:basis-4/5 max-md:w-full">
+          <div className="bg-primary h-[200px] shadow-sm rounded-2xl overflow-hidden relative max-md:hidden">
             <img src={mainBanner} alt="" className="w-full h-full object-cover" />
 
             <div className="absolute right-0 bottom-0 py-4 px-6 flex flex-col justify-center items-center">
@@ -61,7 +63,19 @@ const Searching = () => {
             </div>
           </div>
 
-          <div className="mt-7 grid grid-cols-3 gap-5">
+          <div className="flex md:hidden shadow-sm">
+            <div className="flex items-center gap-3 flex-1 justify-center bg-primary py-3 border-b-[1px] border-r-[1px]">
+              <MdOutlineSort className="text-2xl" />
+              <p className="font-medium text-sm max-sm:text-xs">Sort by</p>
+            </div>
+
+            <div className="flex items-center gap-3 flex-1 justify-center bg-primary py-3 border-b-[1px] border-l-[1px]">
+              <IoFilterOutline className="text-2xl" />
+              <p className="font-medium text-sm max-sm:text-xs">Filter</p>
+            </div>
+          </div>
+
+          <div className="mt-7 grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
             <VehicleCard image={carCard1} />
             <VehicleCard image={carCard2} />
             <VehicleCard image={carCard3} />

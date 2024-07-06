@@ -19,18 +19,18 @@ const Navbar = () => {
 
         <div className="flex items-center gap-5 max-md:hidden">
           <ul className="flex gap-5 text-sm">
-            <Link to="/">
-              <NavItem name="Home" active={path === "/" ? true : false} />
+            <Link to="/home">
+              <NavItem name="Home" active={path === "/home" ? true : false} />
             </Link>
             <Link to="/search">
               <NavItem name="Cars" active={path === "/search" ? true : false} />
             </Link>
-            <Link to="/about">
+            {/* <Link to="/about">
               <NavItem name="About Us" active={path === "/about" ? true : false} />
             </Link>
             <Link to="/contact">
               <NavItem name="Contact Us" active={path === "/contact" ? true : false} />
-            </Link>
+            </Link> */}
           </ul>
 
           <div className="flex items-center gap-1">
@@ -40,7 +40,7 @@ const Navbar = () => {
 
             </div>
 
-            <button className="px-7 py-2 text-sm font-medium bg-light_secondary text-secondary">Get in Touch</button>
+            {/* <button className="px-7 py-2 text-sm font-medium bg-light_secondary text-secondary">Get in Touch</button> */}
           </div>
         </div>
 

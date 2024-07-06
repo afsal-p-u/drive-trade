@@ -30,7 +30,7 @@ const FilterSearch = ({ item, value }: any) => {
 
                 <label
                   htmlFor=""
-                  className="text-xs text-light_gray cursor-pointer"
+                  className="text-sm text-light_gray cursor-pointer"
                 >
                   {item}
                 </label>

@@ -4,7 +4,7 @@ const FeatureItem = ({ icon: Icon, label1, label2 }: any) => {
       <Icon className="text-2xl text-primary" />
 
       <div className="flex flex-col">
-        <h5 className="text-primary font-medium">{label1}</h5>
+        <h5 className="text-primary font-medium max-lg:text-xs">{label1}</h5>
         <p className="text-xs text-light_primary/80">{label2}</p>
       </div>
     </div>
