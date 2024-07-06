@@ -12,15 +12,16 @@ import SocialIcon from "./SocialIcon";
 
 const SignUp = () => {
   return (
-    <div className="w-full h-[100vh] absolute top-0 left-0 flex items-center justify-center z-[85]">
-      <div className="bg-light_primary shadow-md w-[470px] px-5 pt-4 pb-10 rounded-md flex flex-col">
+    <div className="w-full h-[100vh] absolute top-0 left-0 flex items-center justify-center z-[85] max-sm:px-5">
+      <div className="bg-light_primary shadow-md w-[470px] px-5 pt-4 pb-10 max-sm:px-2
+       rounded-md flex flex-col">
         <div className="flex justify-end">
           <IoCloseOutline className="text-2xl cursor-pointer" />
         </div>
 
-        <h1 className="text-center font-semibold text-3xl">Sign Up</h1>
+        <h1 className="text-center font-semibold text-3xl max-sm:text-2xl">Sign Up</h1>
 
-        <p className="text-sm text-center mt-1 text-light_gray">
+        <p className="text-sm text-center mt-1 text-light_gray max-sm:text-xs">
           Already have an account? <span className="text-secondary">SignIn</span>
         </p>
 
@@ -34,7 +35,7 @@ const SignUp = () => {
         </div>
 
         <div className="mt-4 px-10 flex justify-center flex-col gap-3 items-center">
-          <p className="text-xs text-light_gray">
+          <p className="text-xs text-light_gray max-sm:text-center">
             By sign up you agree to the{" "}
             <span className="font-medium text-black">terms & conditions</span>
           </p>

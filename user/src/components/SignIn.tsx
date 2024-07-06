@@ -9,7 +9,7 @@ import SocialIcon from "./SocialIcon";
 
 const SignIn = () => {
   return (
-    <div className="w-full h-[100vh] absolute top-0 left-0 flex items-center justify-center z-[85]">
+    <div className="w-full h-[100vh] absolute top-0 left-0 flex items-center justify-center z-[85] max-sm:px-5">
       <div className="bg-light_primary shadow-md w-[470px] px-5 pt-4 pb-10 rounded-md flex flex-col">
         <div className="flex justify-end">
           <IoCloseOutline className="text-2xl cursor-pointer" />

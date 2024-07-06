@@ -10,7 +10,7 @@ const CarType = ({ image, type }: any) => {
         </div>
       </div>
       
-      <img src={image} alt="" />
+      <img src={image} alt="" className="w-full" />
     </div>
   );
 };
