@@ -5,6 +5,7 @@ import { IoFilterOutline } from "react-icons/io5";
 import { VehicleCard } from "../components";
 import { FilterSearch, PaginationButton } from "../components/searching";
 import { carCard1, carCard2, carCard3, mainBanner, sideBanner } from "../assets/searching";
+import { Link } from "react-router-dom";
 
 const Searching = () => {
   return (
@@ -76,15 +77,33 @@ const Searching = () => {
           </div>
 
           <div className="mt-7 grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
-            <VehicleCard image={carCard1} />
-            <VehicleCard image={carCard2} />
-            <VehicleCard image={carCard3} />
-            <VehicleCard image={carCard1} />
-            <VehicleCard image={carCard2} />
-            <VehicleCard image={carCard3} />
-            <VehicleCard image={carCard1} />
-            <VehicleCard image={carCard2} />
-            <VehicleCard image={carCard3} />
+            <Link to="/view">
+              <VehicleCard image={carCard1} />
+            </Link>
+            <Link to="/view">
+              <VehicleCard image={carCard2} />
+            </Link>
+            <Link to="/view">
+              <VehicleCard image={carCard3} />
+            </Link>
+            <Link to="/view">
+              <VehicleCard image={carCard1} />
+            </Link>
+            <Link to="/view">
+              <VehicleCard image={carCard2} />
+            </Link>
+            <Link to="/view">
+              <VehicleCard image={carCard3} />
+            </Link>
+            <Link to="/view">
+              <VehicleCard image={carCard1} />
+            </Link>
+            <Link to="/view">
+              <VehicleCard image={carCard2} />
+            </Link>
+            <Link to="/view">
+              <VehicleCard image={carCard3} />
+            </Link>
           </div>
 
           <div className="py-5 mt-4 flex items-center justify-center">

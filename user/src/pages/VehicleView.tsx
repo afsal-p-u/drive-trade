@@ -20,6 +20,8 @@ import {
   carViewImage,
 } from "../assets/vehicle-view";
 import { ExtraFeaturesItem, FeaturesItem } from "../components/vehicle-view";
+import { VehicleCard } from "../components";
+import { carCard1, carCard2, carCard3 } from "../assets/searching";
 
 const VehicleView = () => {
   return (
@@ -166,13 +168,24 @@ const VehicleView = () => {
               Chat With Dealer
             </button>
 
-            <button 
+            <button
               className="mt-2 border-[1px] border-green-500 text-green-500 
               rounded-xl w-full py-4 text-sm font-medium"
             >
               Chat Via Whatsapp
             </button>
           </div>
+        </div>
+      </div>
+
+      <div className="py-[50px] px-[100px] bg-light_primary">
+        <h3 className="text-xl font-semibold">Related Cars</h3>
+
+        <div className="grid grid-cols-4 gap-5 mt-5">
+          <VehicleCard image={carCard1} />
+          <VehicleCard image={carCard2} />
+          <VehicleCard image={carCard3} />
+          <VehicleCard image={carCard1} />
         </div>
       </div>
     </div>

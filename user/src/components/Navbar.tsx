@@ -1,10 +1,12 @@
 import { CiUser } from "react-icons/ci";
 import { Link, useLocation } from "react-router-dom";
 import { LuMenu } from "react-icons/lu";
+import { usePopupContext } from "../contexts/PopupContext";
 
 const Navbar = () => {
+  const { setComponent }: any = usePopupContext()
   const location = useLocation();
-  const path = location?.pathname
+  const path = location?.pathname;
 
   return (
     <div className="bg-primary w-full px-[100px] max-lg:px-[30px]">
@@ -34,10 +36,12 @@ const Navbar = () => {
           </ul>
 
           <div className="flex items-center gap-1">
-            <div className="flex items-center gap-2 text-sm font-medium border-l-[1px] px-5">
-              <CiUser className="text-lg" />
-              <p>Sign up</p>
-
+            <div
+              className="flex items-center gap-2 text-sm font-medium border-l-[1px] px-5"
+              onClick={() => setComponent('sign-up')}
+            >
+              <CiUser className="text-lg  cursor-pointer" />
+              <p className="cursor-pointer">Sign up</p>
             </div>
 
             {/* <button className="px-7 py-2 text-sm font-medium bg-light_secondary text-secondary">Get in Touch</button> */}
@@ -52,8 +56,10 @@ const Navbar = () => {
 
 const NavItem = ({ name, active }: any) => {
   return (
-    <li className={`font-medium cursor-pointer ${active && 'text-secondary'}`}>{name}</li>
-  )
-}
+    <li className={`font-medium cursor-pointer ${active && "text-secondary"}`}>
+      {name}
+    </li>
+  );
+};
 
 export default Navbar;
