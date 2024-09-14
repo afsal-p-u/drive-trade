@@ -3,10 +3,10 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom'
 // import router from './routes.tsx'
 import axios from 'axios'
-import { Login } from './pages'
+import { Home, Login } from './pages'
 // import { AuthContextProvider } from './contexts/AuthContext.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 //   <RouterProvider router={router} /> 
-    <Login />
+    <Home />
 )

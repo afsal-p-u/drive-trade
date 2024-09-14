@@ -9,10 +9,12 @@ import SocialIcon from "./SocialIcon";
 import { usePopupContext } from "../contexts/PopupContext";
 import { useState } from "react";
 import apiRequest from "../utils/apiRequest";
+import { useAuthContext } from "../contexts/AuthContext";
 
 const SignIn = () => {
   const [inputs, setInputs] = useState(null);
   const { setComponent }: any = usePopupContext();
+  const { setAuth }: any = useAuthContext()
 
   const changeInputs = (e: any) => {
     setInputs((prev: any) => {
@@ -25,8 +27,9 @@ const SignIn = () => {
 
     apiRequest
       .post("/auth/sign-in", inputs)
-      .then(() => {
-        setComponent("otp");
+      .then((res) => {
+        setAuth(res.data)
+        setComponent(null);
       })
       .catch((err) => {
         console.log(err);
