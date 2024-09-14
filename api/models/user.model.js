@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema({
     profilePic: { type: String },
     isVerified: { type: Boolean, default: false },
     isUser: { type: String, enum: ["seller", "admin", "user"], default: "user" },
-    otp: { type: Number }
+    otp: { type: Number } 
 })
 
 module.exports = mongoose.model('User', UserSchema)
