@@ -2,9 +2,11 @@ import { CiUser } from "react-icons/ci";
 import { Link, useLocation } from "react-router-dom";
 import { LuMenu } from "react-icons/lu";
 import { usePopupContext } from "../contexts/PopupContext";
+import { useAuthContext } from "../contexts/AuthContext";
 
 const Navbar = () => {
   const { setComponent }: any = usePopupContext()
+  const { auth }: any = useAuthContext()
   const location = useLocation();
   const path = location?.pathname;
 
@@ -34,18 +36,20 @@ const Navbar = () => {
               <NavItem name="Contact Us" active={path === "/contact" ? true : false} />
             </Link> */}
           </ul>
+          
+          {!auth && (
+            <div className="flex items-center gap-1">
+              <div
+                className="flex items-center gap-2 text-sm font-medium border-l-[1px] px-5"
+                onClick={() => setComponent('sign-up')}
+              >
+                <CiUser className="text-lg  cursor-pointer" />
+                <p className="cursor-pointer">Sign up</p>
+              </div>
 
-          <div className="flex items-center gap-1">
-            <div
-              className="flex items-center gap-2 text-sm font-medium border-l-[1px] px-5"
-              onClick={() => setComponent('sign-up')}
-            >
-              <CiUser className="text-lg  cursor-pointer" />
-              <p className="cursor-pointer">Sign up</p>
+              {/* <button className="px-7 py-2 text-sm font-medium bg-light_secondary text-secondary">Get in Touch</button> */}
             </div>
-
-            {/* <button className="px-7 py-2 text-sm font-medium bg-light_secondary text-secondary">Get in Touch</button> */}
-          </div>
+          ) }
         </div>
 
         <LuMenu className="md:hidden text-2xl" />

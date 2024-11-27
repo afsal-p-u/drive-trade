@@ -5,6 +5,7 @@ require("dotenv").config();
 const DBconnect = require("./utils/db");
 
 const authRoutes = require("./routes/auth.route");
+const vehicleRoutes = require("./routes/vehicle.route");
 
 DBconnect();
 
@@ -21,6 +22,7 @@ app.use(express.json())
 // console.log(process.env.ORIGIN)
  
 app.use("/api/auth", authRoutes);
+app.use("/api/vehicle", vehicleRoutes);
 
 const port = process.env.PORT | 5000;
 app.listen(port, console.log("Server running on port ", port));
